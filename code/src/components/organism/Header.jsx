@@ -1,12 +1,21 @@
-import Navigation from '../molecule/Navigation'
+import { Link } from 'react-router-dom';
+import Navigation from '../molecule/Navigation';
 
 const Header = () => {
   return (
     <header>
-      헤더입니다.
+      <h1>
+        <span>공차</span>
+        <Link to="/">
+          <img
+            src="../../assets/logo.svg"
+            alt="공차로고"
+          />
+        </Link>
+      </h1>
       <Navigation></Navigation>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

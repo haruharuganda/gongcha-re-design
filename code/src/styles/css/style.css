@@ -1,0 +1,14 @@
+header {
+  background-color: tan;
+  height: 9.375rem;
+}
+
+footer {
+  background-color: teal;
+  height: 21.875rem;
+}
+
+main {
+  background-color: thistle;
+  height: 100vh;
+}

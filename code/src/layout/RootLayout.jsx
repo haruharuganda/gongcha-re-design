@@ -1,6 +1,8 @@
-import { Outlet } from 'react-router-dom'
-import Header from '../components/organism/Header'
-import Footer from '../components/organism/Footer'
+import { Outlet } from 'react-router-dom';
+import Header from '../components/organism/Header';
+import Footer from '../components/organism/Footer';
+import '../styles/css/reset.css';
+import '../styles/css/style.css';
 
 const RootLayout = () => {
   return (
@@ -12,7 +14,7 @@ const RootLayout = () => {
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
