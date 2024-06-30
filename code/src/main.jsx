@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
-import root from './routes/root'
+import router from './routes/router'
 import { RouterProvider } from 'react-router-dom'
 
 const rootNode = document.getElementById('root')
-ReactDOM.createRoot(rootNode).render(<RouterProvider router={root} />)
+ReactDOM.createRoot(rootNode).render(<RouterProvider router={router} />)
