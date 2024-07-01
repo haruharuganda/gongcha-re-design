@@ -93,10 +93,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 iframe {
   overflow: hidden;
   margin: 0;

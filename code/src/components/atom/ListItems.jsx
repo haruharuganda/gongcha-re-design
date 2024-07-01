@@ -1,9 +1,11 @@
 const ListItems = ({ listItems }) => {
-  const { hasLinkTag, items } = listItems;
-
-  items.forEach((element, key) => {
-    console.log(element, key);
-  });
-  return <></>;
+  return (
+    <>
+      {listItems.map((item, index) => {
+        return <li key={index}>{item}</li>;
+      })}
+    </>
+  );
 };
+
 export default ListItems;
