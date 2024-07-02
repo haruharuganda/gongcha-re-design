@@ -32,6 +32,7 @@ nav {
     content: '';
     display: block;
     height: 0;
+    top: 100%;
     width: 100%;
     position: absolute;
     left: 0;
@@ -43,7 +44,7 @@ nav {
     height: 25rem;
   }
 
-  ul.main-menu.tablet {
+  ul.main-menu.desktop {
     @extend .flex-dox;
 
     > li {
@@ -90,7 +91,7 @@ nav {
     position: absolute;
     overflow: hidden;
     transition: 0.5s;
-
+    font-size: 0.875rem;
     li {
       width: 100%;
       line-height: 2.5;
@@ -102,19 +103,7 @@ nav {
   }
 }
 
-ul.sub-menu.over,
-.bg.over {
+ul.sub-menu.over {
   display: block;
   height: 25rem;
-}
-
-.bg {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 0;
-  left: -30px;
-  top: 100%;
-  z-index: 1;
-  width: 100%;
-  transition: 0.5s;
 }

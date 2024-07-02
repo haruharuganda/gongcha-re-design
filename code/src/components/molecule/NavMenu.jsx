@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import ListItems from '../atom/ListItems';
 import { useState } from 'react';
+import ListItems from '../atom/ListItems';
+import { iconPath } from '../../assets/imgPath';
 
 const NavMenu = ({ listItems }) => {
   const menuList = listItems.items;
@@ -13,11 +14,11 @@ const NavMenu = ({ listItems }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
+  console.log(iconPath.menu);
   return (
     <>
       <ul
-        className="main-menu tablet"
+        className="main-menu desktop "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {menuList.map((element, key) => {
@@ -32,7 +33,14 @@ const NavMenu = ({ listItems }) => {
         })}
       </ul>
 
-      <ul className="main-menu mobile"></ul>
+      <ul className="main-menu mobile">
+        <li>
+          <img
+            src={iconPath.menu}
+            alt="클릭시 메뉴로 가는 아이콘"
+          />
+        </li>
+      </ul>
     </>
   );
 };

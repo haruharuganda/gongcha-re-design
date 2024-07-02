@@ -2,6 +2,7 @@
 
 @include tablet {
   header {
+    height: 5rem;
     h1 {
       padding: 0 1.5625rem;
 
@@ -16,13 +17,14 @@
     }
 
     ul.sub-menu {
-      font-size: 0.75rem;
+      font-size: 0.625rem;
     }
   }
 }
 
 @include mobile {
   header {
+    height: 3.75rem;
     h1 {
       padding: 0.625rem;
 
@@ -32,12 +34,21 @@
     }
   }
   nav {
-    ul.main-menu.tablet {
+    &::after {
+      content: '';
+      display: none;
+    }
+
+    ul.main-menu.desktop {
       display: none;
     }
 
     ul.main-menu.mobile {
       display: block;
     }
+  }
+
+  .bg.over {
+    display: none;
   }
 }
