@@ -36,14 +36,14 @@ nav {
     position: absolute;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: height 0.5s ease; /* 가상 요소에 transition 속성을 직접 적용 */
+    transition: height 0.5s ease;
   }
 
   &:hover::after {
-    height: 25rem; /* hover 시 height 값을 변경하여 나타나게 함 */
+    height: 25rem;
   }
 
-  ul.main-menu {
+  ul.main-menu.tablet {
     @extend .flex-dox;
 
     li {
@@ -75,6 +75,10 @@ nav {
       color: #b81c2e;
       font-weight: bold;
     }
+  }
+
+  ul.main-menu.mobile {
+    display: none;
   }
 
   ul.sub-menu {

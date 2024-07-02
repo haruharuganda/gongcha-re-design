@@ -1,0 +1,43 @@
+@import 'mixin';
+
+@include tablet {
+  header {
+    h1 {
+      padding: 0 1.5625rem;
+
+      img {
+        width: 2.625rem;
+      }
+    }
+  }
+  nav {
+    a {
+      font-size: 0.75rem;
+    }
+
+    ul.sub-menu {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@include mobile {
+  header {
+    h1 {
+      padding: 0.625rem;
+
+      img {
+        width: 1.375rem;
+      }
+    }
+  }
+  nav {
+    ul.main-menu.tablet {
+      display: none;
+    }
+
+    ul.main-menu.mobile {
+      display: block;
+    }
+  }
+}

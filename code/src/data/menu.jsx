@@ -7,7 +7,7 @@ const naviMenu = {
     },
     {
       main: 'Menu',
-      path: '/menu',
+      path: '/',
       sub: [
         '주문방법',
         '신메뉴',
@@ -38,7 +38,7 @@ const naviMenu = {
       path: '/',
       sub: ['이벤트', '공차소식']
     },
-    { main: '가맹점 개설문의', path: '/', sub: [] }
+    { main: '가맹점', path: '/', sub: [] }
   ]
 };
 

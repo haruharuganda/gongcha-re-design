@@ -17,7 +17,7 @@ const NavMenu = ({ listItems }) => {
   return (
     <>
       <ul
-        className="main-menu"
+        className="main-menu tablet"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {menuList.map((element, key) => {
@@ -31,6 +31,8 @@ const NavMenu = ({ listItems }) => {
           );
         })}
       </ul>
+
+      <ul className="main-menu mobile"></ul>
     </>
   );
 };
