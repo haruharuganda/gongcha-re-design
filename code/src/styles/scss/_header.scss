@@ -46,7 +46,7 @@ nav {
   ul.main-menu.tablet {
     @extend .flex-dox;
 
-    li {
+    > li {
       width: 14.24%;
       position: relative;
       transition: 0.5s;
