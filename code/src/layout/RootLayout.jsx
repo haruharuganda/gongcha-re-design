@@ -3,8 +3,9 @@ import Header from '../components/organism/Header';
 import Footer from '../components/organism/Footer';
 
 const RootLayout = () => {
+  
   return (
-    <div className="wrap">
+    <div>
       <Header />
       <main>
         props.children 대체!
