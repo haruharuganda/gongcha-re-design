@@ -1,4 +1,3 @@
-export const iconPath = {
-  logo: './img/logo.png',
-  menu: './img/icon/menu.svg'
-};
+import { default as menu } from './img/icon/menu.svg';
+import { default as logo } from './img/logo.png';
+export { menu, logo };

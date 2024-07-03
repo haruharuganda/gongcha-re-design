@@ -1,24 +1,27 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ListItems from '../atom/ListItems';
-import { iconPath } from '../../assets/imgPath';
 
-const NavMenu = ({ listItems }) => {
+const NavMenu = ({ listItems, disableHover }) => {
   const menuList = listItems.items;
-
   const [isHovered, setIsHovered] = useState(false);
+
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (disableHover) {
+      setIsHovered(true);
+    }
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    if (disableHover) {
+      setIsHovered(false);
+    }
   };
-  console.log(iconPath.menu);
+
   return (
     <>
       <ul
-        className="main-menu desktop "
+        className="main-menu "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {menuList.map((element, key) => {
@@ -31,15 +34,6 @@ const NavMenu = ({ listItems }) => {
             </li>
           );
         })}
-      </ul>
-
-      <ul className="main-menu mobile">
-        <li>
-          <img
-            src={iconPath.menu}
-            alt="클릭시 메뉴로 가는 아이콘"
-          />
-        </li>
       </ul>
     </>
   );

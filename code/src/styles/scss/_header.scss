@@ -16,6 +16,13 @@ header {
     padding: 0 3.125rem;
     position: absolute;
   }
+
+  > div {
+    padding: 0 3.125rem;
+    width: 1.75rem;
+    position: absolute;
+    right: 0;
+  }
 }
 
 header.scrolled {
@@ -41,10 +48,10 @@ nav {
   }
 
   &:hover::after {
-    height: 25rem;
+    height: 18.75rem;
   }
 
-  ul.main-menu.desktop {
+  ul.main-menu {
     @extend .flex-dox;
 
     > li {
@@ -53,7 +60,7 @@ nav {
       transition: 0.5s;
 
       a {
-        line-height: 5.6;
+        line-height: 6.25rem;
 
         &::after {
           display: block;
@@ -78,10 +85,6 @@ nav {
     }
   }
 
-  ul.main-menu.mobile {
-    display: none;
-  }
-
   ul.sub-menu {
     color: #fff;
     width: 100%;
@@ -91,7 +94,7 @@ nav {
     position: absolute;
     overflow: hidden;
     transition: 0.5s;
-    font-size: 0.875rem;
+    font-size: 1rem;
     li {
       width: 100%;
       line-height: 2.5;
@@ -105,5 +108,77 @@ nav {
 
 ul.sub-menu.over {
   display: block;
-  height: 25rem;
+  height: 18.75rem;
+}
+
+.full-menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr;
+  align-items: center;
+
+  > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  ul.main-menu {
+    display: grid;
+    align-items: center;
+    width: 60%;
+    height: 90%;
+    margin: 0 auto;
+
+    > li {
+      display: flex;
+      text-align: right;
+      position: relative;
+    }
+    > li::after {
+      display: block;
+      content: '';
+      position: absolute;
+      background-color: #d1d1d1;
+      z-index: 1;
+      inline-size: 100vw;
+      block-size: var(--line-thickness);
+      inset-inline-start: 0;
+      inset-block-start: calc(var(--line-offset) * -1);
+    }
+    > li > a {
+      text-align: left;
+      width: 30%;
+      font-size: 18px;
+    }
+    > li:hover > a {
+      font-weight: bold;
+      color: #b81c2e;
+    }
+  }
+
+  ul.sub-menu {
+    display: flex;
+    width: 100%;
+    gap: 1.25rem;
+  }
+}
+
+.grid {
+  --gap: 2em;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 2px;
+  --line-color: red;
+}
+
+.grid__item::before,
+.grid__item::after {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  z-index: 1;
 }
