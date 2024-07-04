@@ -18,6 +18,26 @@
   nav {
     display: none;
   }
+
+  .full-menu {
+    > h2 {
+      font-size: 1.125rem;
+    }
+    ul.main-menu {
+      > li {
+        display: block;
+        img {
+          display: block;
+        }
+      }
+    }
+    ul.sub-menu {
+      display: none;
+    }
+    ul.sub-menu.over {
+      display: block;
+    }
+  }
 }
 
 @include mobile {

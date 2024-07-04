@@ -1,8 +1,7 @@
-import NavMenu from '../molecule/NavMenu';
 import naviMenu from '../../data/menu';
-const FullMenu = ({ set }) => {
-  const disableHover = false;
+import DropDown from '../molecule/DropDown';
 
+const FullMenu = ({ set }) => {
   function hendlerMenuClosed() {
     set(false);
   }
@@ -14,11 +13,7 @@ const FullMenu = ({ set }) => {
         hendlerMenuClosed();
       }}>
       <h2>MENU</h2>
-
-      <NavMenu
-        listItems={naviMenu}
-        disableHover={disableHover}
-      />
+      <DropDown listItems={naviMenu} />
     </div>
   );
 };

@@ -2,20 +2,16 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ListItems from '../atom/ListItems';
 
-const NavMenu = ({ listItems, disableHover }) => {
+const NavMenu = ({ listItems }) => {
   const menuList = listItems.items;
+
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    if (disableHover) {
-      setIsHovered(true);
-    }
+    setIsHovered(true);
   };
-
   const handleMouseLeave = () => {
-    if (disableHover) {
-      setIsHovered(false);
-    }
+    setIsHovered(false);
   };
 
   return (
