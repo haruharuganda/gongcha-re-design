@@ -1,0 +1,132 @@
+@import 'mixin';
+
+header {
+   width: 100%;
+   height: 7.5rem;
+   position: fixed;
+
+   .container {
+      height: 100%;
+      @extend .flex-center;
+      h1 {
+         position: absolute;
+         span {
+            position: absolute;
+            clip: rect(0px, 0px, 0px, 0px);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+         }
+      }
+      nav {
+         font-size: 1.125rem;
+         margin: 0 auto;
+         width: 67.5%;
+         text-align: center;
+         .main-menu {
+            @extend .flex-center;
+
+            > li:last-child {
+               color: $main-color;
+            }
+
+            > li {
+               position: relative;
+               width: 14%;
+
+               > a {
+                  line-height: 7.5rem;
+                  text-decoration: none;
+               }
+               &:hover > a {
+                  font-weight: bold;
+               }
+
+               &::after {
+                  display: block;
+                  content: '';
+                  border-bottom: solid 3px $main-color;
+                  transform: scaleX(0);
+                  transition: transform 250ms ease-in-out;
+               }
+               &:hover::after {
+                  transform: scaleX(1);
+               }
+            }
+         }
+
+         .sub-menu {
+            width: 100%;
+            padding: 1.5rem 0;
+            color: white;
+            position: absolute;
+            > li {
+               &:last-child {
+                  padding: 0;
+               }
+               padding-bottom: 1.5rem;
+
+               &:hover {
+                  color: $main-color;
+               }
+            }
+         }
+      }
+   }
+   .menu-icon {
+      width: 2rem;
+      height: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url('../img/icon/menu.svg') center/cover;
+      position: absolute;
+      right: 20px;
+      display: none;
+   }
+}
+header::after {
+   display: block;
+   content: '';
+   height: 18.75rem;
+   background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+@include desktopTotablet {
+   header {
+      height: $header-table-height;
+      .container {
+         width: 100%;
+         height: 100%;
+         h1 {
+            img {
+               width: 3.75rem;
+            }
+         }
+         nav {
+            display: none;
+         }
+         .menu-icon {
+            display: block;
+         }
+      }
+   }
+}
+
+@include laptopToMobile {
+   header {
+      height: $header-table-mobile;
+      .container {
+         height: 100%;
+         h1 {
+            img {
+               width: 2.5rem;
+            }
+         }
+         .menu-icon {
+            width: $mobile-icon-size;
+            height: $mobile-icon-size;
+         }
+      }
+   }
+}

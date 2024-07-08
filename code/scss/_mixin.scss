@@ -1,0 +1,19 @@
+@import './variable';
+
+@mixin laptopToMobile {
+   @media (max-width: #{$breakpoint-mobile - 1px}) {
+      @content;
+   }
+}
+
+@mixin desktopTotablet {
+   @media (max-width: #{$breakpoint-tablet - 1px}) {
+      @content;
+   }
+}
+
+@mixin desktop {
+   @media (min-width: #{$breakpoint-desktop}) {
+      @content;
+   }
+}
