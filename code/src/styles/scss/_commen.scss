@@ -1,0 +1,21 @@
+$tablet-padding: 0 1.5625rem;
+$mobile-padding: 0 0.625rem;
+$header-tablet-hieght: 5rem;
+$header-mobile-hieght: 3.75rem;
+
+.wrap {
+  width: 78.46%;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.flex-dox {
+  display: flex;
+  align-items: center;
+}

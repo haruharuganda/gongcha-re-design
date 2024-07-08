@@ -1,16 +1,12 @@
-import { Link } from 'react-router-dom'
+import NavMenu from './NavMenu';
+import naviMenu from '../../data/menu';
 
 const Navigation = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          <Link to={'/test1'}>test1</Link>
-          <Link to={'/test2'}>test1</Link>
-        </li>
-      </ul>
+      <NavMenu listItems={naviMenu} />
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

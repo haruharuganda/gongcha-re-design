@@ -1,0 +1,68 @@
+@import 'mixin';
+
+@include tablet {
+  header {
+    height: $header-tablet-hieght;
+    h1 {
+      padding: $tablet-padding;
+
+      img {
+        width: 2.625rem;
+      }
+    }
+    > div {
+      width: 1.5625rem;
+      padding: $tablet-padding;
+    }
+  }
+  nav {
+    display: none;
+  }
+
+  .full-menu {
+    > h2 {
+      font-size: 1.125rem;
+    }
+    ul.main-menu {
+      > li {
+        display: block;
+        img {
+          display: block;
+        }
+      }
+    }
+    ul.sub-menu {
+      display: none;
+    }
+    ul.sub-menu.over {
+      display: block;
+    }
+  }
+}
+
+@include mobile {
+  header {
+    height: $header-mobile-hieght;
+    h1 {
+      padding: 0 0.625rem;
+
+      img {
+        width: 1.375rem;
+      }
+    }
+    > div {
+      width: 1.25rem;
+      padding: $mobile-padding;
+    }
+  }
+  nav {
+    &::after {
+      content: '';
+      display: none;
+    }
+  }
+
+  .bg.over {
+    display: none;
+  }
+}
