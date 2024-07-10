@@ -1,3 +1,27 @@
+const main = new Swiper('.main-carousel .swiper', {
+   speed: 400,
+   spaceBetween: 100,
+   loop: true,
+
+   autoplay: true,
+});
+
+const menu = new Swiper('.menu-description .mySwiper', {
+   slidesPerView: 3,
+   centeredSlides: true,
+   spaceBetween: 30,
+   rewind: true,
+   autoplay: true,
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+   },
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+});
+
 $(function () {
    $('.sub-menu').hide();
    $('nav')
@@ -10,27 +34,39 @@ $(function () {
          $('.sub-menu').stop().slideUp();
       });
 
-   $('.main-carousel .post-wrapper').slick({
-      swipeToSlide: true,
-      touchMove: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      infinite: true,
-      arrows: false,
-      autoplaySpeed: 3000,
-   });
+   // $('.main-carousel .post-wrapper').slick({
+   //    slidesToShow: 1,
+   //    slidesToScroll: 1,
+   //    autoplay: true,
+   //    arrows: false,
+   //    autoplaySpeed: 3000,
+   // });
 
-   $('.menu-description .post-wrapper').slick({
-      swipeToSlide: true,
-      touchMove: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      infinite: true,
-      arrows: false,
-      autoplaySpeed: 3000,
-   });
+   // $('.menu-description .post-wrapper ').slick({
+   //    centerMode: true,
+   //    centerPadding: '300px',
+   //    slidesToShow: 1,
+   //    responsive: [
+   //       {
+   //          breakpoint: 768,
+   //          settings: {
+   //             arrows: false,
+   //             centerMode: true,
+   //             centerPadding: '40px',
+   //             slidesToShow: 1,
+   //          },
+   //       },
+   //       {
+   //          breakpoint: 480,
+   //          settings: {
+   //             arrows: false,
+   //             centerMode: true,
+   //             centerPadding: '40px',
+   //             slidesToShow: 1,
+   //          },
+   //       },
+   //    ],
+   // });
 
    const scrollHeight = 100;
    let debounceTimeout = null;

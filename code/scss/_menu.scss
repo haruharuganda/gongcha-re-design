@@ -2,10 +2,12 @@
 @import 'common';
 
 .gongCha-menu {
-   display: flex;
    height: 42.5rem;
    color: #fff;
-
+   .container {
+      display: flex;
+      height: 100%;
+   }
    .menu-list {
       width: 28%;
       background-color: $main-color;
@@ -63,5 +65,67 @@
    }
    .menu-description {
       width: 72%;
+      display: flex;
+      align-items: center;
+      color: #202020;
+      overflow: hidden;
+      .swiper {
+         .swiper-slide {
+            display: inline-block;
+
+            .description {
+               opacity: 0;
+               transition: opacity 0.3s;
+               h4 {
+                  margin: 1rem 0;
+               }
+               p {
+                  line-height: 1.6;
+                  margin: 1rem 0;
+               }
+
+               .rating {
+                  display: flex;
+                  margin-bottom: 0.5rem;
+                  span {
+                     color: #a6a6a6;
+                     width: 15%;
+                     margin-right: 0.9375rem;
+                  }
+                  ul {
+                     display: flex;
+                     gap: 0.5rem;
+                     li {
+                        width: 0.9375rem;
+                        height: 0.9375rem;
+                        background-color: #a6a6a6;
+                        border-radius: 50%;
+                     }
+                  }
+               }
+            }
+            &.swiper-slide-active {
+               .description {
+                  opacity: 1;
+               }
+            }
+         }
+      }
    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   color: #000000;
+}
+
+.swiper-button-next {
+   left: 50%;
+}
+.swiper-button-prev {
+   right: unset;
+   left: calc('50% - 50px');
+}
+.swiper-horizontal > .swiper-pagination-progressbar {
+   width: 50%;
 }

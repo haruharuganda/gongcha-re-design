@@ -8,11 +8,8 @@
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
       <!-- SLICK -->
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-      <script
-         type="text/javascript"
-         src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-      ></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
       <script defer src="./js/main.js"></script>
 
@@ -92,43 +89,153 @@
       </header>
       <main>
          <div class="main-carousel">
-            <div class="post-slider">
-               <div class="post-wrapper">
-                  <div class="post">
+            <div class="swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
                      <img class="slideImg" src="./img/slider/miniPual.jpg" alt="신제품 미니펄을 즐겨보세요" />
                   </div>
-                  <div class="post">
+                  <div class="swiper-slide">
                      <img class="slideImg" src="./img/slider/peachSliderImg.jpg" alt="신제품 미니펄을 즐겨보세요" />
                   </div>
                </div>
             </div>
          </div>
-         <div class="gongCha-menu container">
-            <div class="menu-list">
-               <div class="wrap">
-                  <h1>GONG CHA MENU</h1>
-                  <ul class="list">
-                     <li><span>BEST SELLER</span></li>
-                     <li><span> ORIGINAL TEA</span></li>
-                     <li><span>MILK TEA</span></li>
-                     <li><span>COFFEE</span></li>
-                  </ul>
-                  <div class="viewMore">
-                     <span> VIEW MORE</span>
-                     <img src="./img/icon/viewMore.svg" alt="클릭시 메뉴를 더 볼 수 있습니다" />
+         <div class="gongCha-menu">
+            <div class="container">
+               <div class="menu-list">
+                  <div class="wrap">
+                     <h1>GONG CHA MENU</h1>
+                     <ul class="list">
+                        <li><span>BEST SELLER</span></li>
+                        <li><span> ORIGINAL TEA</span></li>
+                        <li><span>MILK TEA</span></li>
+                        <li><span>COFFEE</span></li>
+                     </ul>
+                     <div class="viewMore" role="button">
+                        <span> VIEW MORE</span>
+                        <img src="./img/icon/viewMore.svg" alt="클릭시 메뉴를 더 볼 수 있습니다" />
+                     </div>
+                  </div>
+               </div>
+               <div class="menu-description">
+                  <div class="swiper mySwiper">
+                     <div class="swiper-pagination"></div>
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <img src="./img/menuList/블랙펄.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
+                           <div class="description">
+                              <h4>우롱차 + 코코넛 펄 + 밀크폼</h4>
+                              <p>
+                                 깊고 고소한 우롱차에 코코넛 젤리와 <br />
+                                 달콤짭쪼름한 밀크폼을 올려 다양한 식감과 <br />함께 부드럽게 즐기는 오리지널티
+                              </p>
+                              <div class="rating">
+                                 <span>sweet</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                              <div class="rating">
+                                 <span>ice</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="./img/menuList/우롱차.png" alt="우롱차" />
+                           <div class="description">
+                              <h4>우롱차 + 코코넛 펄 + 밀크폼</h4>
+                              <p>
+                                 깊고 고소한 우롱차에 코코넛 젤리와 <br />
+                                 달콤짭쪼름한 밀크폼을 올려 다양한 식감과 <br />함께 부드럽게 즐기는 오리지널티
+                              </p>
+                              <div class="rating">
+                                 <span>sweet</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                              <div class="rating">
+                                 <span>ice</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="./img/menuList/초코.png" alt="흰 밀크폼이 위에있고 아래에 초코음료가 메뉴" />
+                           <div class="description">
+                              <h4>우롱차 + 코코넛 펄 + 밀크폼</h4>
+                              <p>
+                                 깊고 고소한 우롱차에 코코넛 젤리와 <br />
+                                 달콤짭쪼름한 밀크폼을 올려 다양한 식감과 <br />함께 부드럽게 즐기는 오리지널티
+                              </p>
+                              <div class="rating">
+                                 <span>sweet</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                              <div class="rating">
+                                 <span>ice</span>
+                                 <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="menu-description">
-               <div class="post-wrapper">
-                  <div class="post">
-                     <img src="./img/menuList/블랙펄.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
-                  </div>
-                  <div class="post">
-                     <img src="./img/menuList/우롱차.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
-                  </div>
-                  <div class="post">
-                     <img src="./img/menuList/초코.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
+         </div>
+         <div class="order">
+            <div class="container">
+               <div class="text">
+                  <h1>HOW TO OREDER</h1>
+                  <p>
+                     공차는 오리지널 티(Tea)와 밀크티, 스무디, 과일믹스 등의 메뉴를 베이스로 <br />
+                     5가지 당도와 얼음량, 토핑까지 선택할 수 있어 취향에 따라 커스터마이징하여 주문 가능합니다. <br />
+                     약 600여 가지의 다양한 조합으로 음료를 즐길 수 있습니다.
+                  </p>
+               </div>
+               <div class="explan">
+                  <h1>공차는 처음이신가요?</h1>
+                  <div>
+                     <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                     </ul>
                   </div>
                </div>
             </div>
