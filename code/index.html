@@ -6,7 +6,16 @@
       <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon" />
       <title>공차</title>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-      <script defer src=""></script>
+
+      <!-- SLICK -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+      <script
+         type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      ></script>
+
+      <script defer src="./js/main.js"></script>
+
       <link rel="stylesheet" href="./css/reset.css" />
       <link rel="stylesheet" href="./css/style.css" />
    </head>
@@ -81,7 +90,50 @@
             <a class="menu-icon" href="javascript:void(0)"></a>
          </div>
       </header>
-      <main></main>
+      <main>
+         <div class="main-carousel">
+            <div class="post-slider">
+               <div class="post-wrapper">
+                  <div class="post">
+                     <img class="slideImg" src="./img/slider/miniPual.jpg" alt="신제품 미니펄을 즐겨보세요" />
+                  </div>
+                  <div class="post">
+                     <img class="slideImg" src="./img/slider/peachSliderImg.jpg" alt="신제품 미니펄을 즐겨보세요" />
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="gongCha-menu container">
+            <div class="menu-list">
+               <div class="wrap">
+                  <h1>GONG CHA MENU</h1>
+                  <ul class="list">
+                     <li><span>BEST SELLER</span></li>
+                     <li><span> ORIGINAL TEA</span></li>
+                     <li><span>MILK TEA</span></li>
+                     <li><span>COFFEE</span></li>
+                  </ul>
+                  <div class="viewMore">
+                     <span> VIEW MORE</span>
+                     <img src="./img/icon/viewMore.svg" alt="클릭시 메뉴를 더 볼 수 있습니다" />
+                  </div>
+               </div>
+            </div>
+            <div class="menu-description">
+               <div class="post-wrapper">
+                  <div class="post">
+                     <img src="./img/menuList/블랙펄.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
+                  </div>
+                  <div class="post">
+                     <img src="./img/menuList/우롱차.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
+                  </div>
+                  <div class="post">
+                     <img src="./img/menuList/초코.png" alt="블랙 밀크티에 오리지널 검정펄이 들어있는 메뉴" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
       <footer></footer>
    </body>
 </html>

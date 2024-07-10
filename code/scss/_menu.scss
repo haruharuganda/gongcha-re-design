@@ -1,0 +1,67 @@
+@import 'mixin';
+@import 'common';
+
+.gongCha-menu {
+   display: flex;
+   height: 42.5rem;
+   color: #fff;
+
+   .menu-list {
+      width: 28%;
+      background-color: $main-color;
+      @extend .flex-center;
+      justify-content: center;
+
+      .wrap {
+         h1 {
+            margin-bottom: 2.625rem;
+         }
+
+         .list {
+            li {
+               font-size: $h5-font-size;
+               margin-bottom: 1.5rem;
+               cursor: pointer;
+
+               span {
+                  position: relative;
+                  display: inline-block;
+                  &::after {
+                     @extend .after;
+                     border-bottom: solid 3px #fff;
+                     margin-top: 0.3125rem;
+                  }
+
+                  &:hover::after {
+                     @extend .after-hover;
+                  }
+                  &:hover {
+                     font-weight: bold;
+                  }
+               }
+               span.click {
+                  border-bottom: solid 3px #fff;
+                  margin-top: 0.3125rem;
+               }
+            }
+         }
+
+         .viewMore {
+            cursor: pointer;
+            margin-bottom: 2.625rem;
+            span {
+               margin-right: 0.625rem;
+            }
+            img {
+               vertical-align: middle;
+            }
+            &:hover {
+               font-weight: bold;
+            }
+         }
+      }
+   }
+   .menu-description {
+      width: 72%;
+   }
+}

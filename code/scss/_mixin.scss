@@ -12,8 +12,11 @@
    }
 }
 
-@mixin desktop {
-   @media (min-width: #{$breakpoint-desktop}) {
+@mixin slider {
+   overflow: hidden;
+   .post-wrapper {
+      height: 100%;
       @content;
    }
+   @content;
 }
