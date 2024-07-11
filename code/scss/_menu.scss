@@ -6,6 +6,7 @@
    color: #fff;
    .container {
       display: flex;
+
       height: 100%;
    }
    .menu-list {
@@ -63,6 +64,7 @@
          }
       }
    }
+
    .menu-description {
       width: 72%;
       display: flex;
@@ -71,7 +73,8 @@
       overflow: hidden;
       .swiper {
          .swiper-slide {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
 
             .description {
                opacity: 0;
@@ -86,6 +89,7 @@
 
                .rating {
                   display: flex;
+                  align-items: center;
                   margin-bottom: 0.5rem;
                   span {
                      color: #a6a6a6;
@@ -124,7 +128,7 @@
 }
 .swiper-button-prev {
    right: unset;
-   left: calc('50% - 50px');
+   left: calc(50% - 50px);
 }
 .swiper-horizontal > .swiper-pagination-progressbar {
    width: 50%;

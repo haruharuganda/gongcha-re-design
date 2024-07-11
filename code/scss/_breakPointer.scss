@@ -1,0 +1,155 @@
+@import 'mixin';
+@import 'common';
+
+@include desktopTotablet {
+   .gongCha-menu {
+      .container {
+         .menu-list {
+            .wrap {
+               padding: 1.25rem;
+               font-weight: bold;
+               h1 {
+                  line-height: 1;
+               }
+            }
+         }
+         .menu-description {
+            .swiper {
+               .swiper-slide {
+                  .description {
+                     h4 {
+                        line-height: 1;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@include tablet {
+   header {
+      height: $header-table-height;
+      .container {
+         width: 100%;
+         height: 100%;
+         h1 {
+            img {
+               width: 3.75rem;
+            }
+         }
+         nav {
+            display: none;
+         }
+         .menu-icon {
+            display: block;
+         }
+      }
+   }
+
+   .gongCha-menu {
+      width: 100%;
+      .container {
+         width: 100%;
+         padding: 0;
+         flex-direction: column;
+         .menu-list {
+            padding: 1.5625rem 1.25rem;
+            width: 100%;
+            .wrap {
+               text-align: center;
+               width: 100%;
+               .list {
+                  display: flex;
+                  li {
+                     width: 25%;
+                     margin-bottom: 0;
+                  }
+               }
+               .viewMore {
+                  display: none;
+               }
+            }
+         }
+         .menu-description {
+            width: 100%;
+            padding: 1.25rem 0;
+            .swiper {
+               .swiper-button-next,
+               .swiper-button-prev,
+               .swiper-pagination {
+                  display: none;
+               }
+
+               .swiper-slide {
+                  img {
+                     width: 12.5rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@include Mobile {
+   header {
+      height: $header-table-mobile;
+      .container {
+         height: 100%;
+         h1 {
+            img {
+               width: 2.5rem;
+            }
+         }
+         .menu-icon {
+            width: $mobile-icon-size;
+            height: $mobile-icon-size;
+         }
+      }
+   }
+
+   .gongCha-menu {
+      .container {
+         .menu-list {
+            .wrap {
+               h1 {
+                  font-size: $h5-font-size;
+                  margin-bottom: 1.5rem;
+               }
+               .list {
+                  li {
+                     font-size: $body-font-size;
+                  }
+               }
+            }
+         }
+         .menu-description {
+            .swiper {
+               .swiper-slide {
+                  .description {
+                     h4 {
+                        font-size: $body-font-size;
+                     }
+                     p {
+                        font-size: 0.75rem;
+                     }
+                     .rating {
+                        span {
+                           font-size: 0.75rem;
+                        }
+                        ul {
+                           li {
+                              width: 0.625rem;
+                              height: 0.625rem;
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

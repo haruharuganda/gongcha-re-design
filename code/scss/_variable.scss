@@ -1,11 +1,14 @@
 // 모바일
-$breakpoint-mobile: 720px;
+$breakpoint-mobile: 45rem;
 
 // 태블릿
-$breakpoint-tablet: 1024px;
+$breakpoint-tablet: 64rem;
+
+// 노트북에서 데스크탑
+$breakpoint-desktopToLaptop: 93.75rem;
 
 // 데스크탑
-$breakpoint-desktop: 1800px;
+$breakpoint-desktop: 112.5rem;
 
 $main-color: #b81b2d;
 $tablet-icon-size: 2rem;
@@ -17,3 +20,4 @@ $h2-font-size: 2rem;
 $h3-font-size: 1.75rem;
 $h4-font-size: 1.5rem;
 $h5-font-size: 1.125rem;
+$body-font-size: 1rem;

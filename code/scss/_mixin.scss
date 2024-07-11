@@ -1,13 +1,20 @@
 @import './variable';
 
-@mixin laptopToMobile {
-   @media (max-width: #{$breakpoint-mobile - 1px}) {
+@mixin Mobile {
+   @media (max-width: #{$breakpoint-mobile}) {
       @content;
    }
 }
 
+@mixin tablet {
+   @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+   }
+}
+
+// 노트북에서 데스크탑 : 최소 '노트북에서 데스크탑'사이즈부터 ~ 최대 '데스크탑'사이즈까지
 @mixin desktopTotablet {
-   @media (max-width: #{$breakpoint-tablet - 1px}) {
+   @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 0.0625rem}) {
       @content;
    }
 }
