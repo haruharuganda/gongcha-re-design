@@ -91,6 +91,59 @@
          }
       }
    }
+
+   .order {
+      .container {
+         .explan {
+            text-align: center;
+            > div {
+               height: 100%;
+               ul {
+                  text-align: center;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  height: calc(100% / 3);
+                  gap: 32px;
+                  li {
+                     width: 100%;
+                     display: block;
+                     .card {
+                        padding: 0 20px;
+                        img {
+                           display: none;
+                        }
+                        > div {
+                           margin-top: 2rem;
+                           text-align: left;
+                           span {
+                              margin-bottom: 1rem;
+                           }
+                           h4 {
+                              line-height: 1;
+                              margin-bottom: 0.5rem;
+                           }
+                           p {
+                              opacity: 0;
+                              transition: 0.3s;
+                           }
+                        }
+                     }
+                     &:hover {
+                        .card {
+                           img {
+                              padding: 1.75rem 0 2rem 0;
+                           }
+                           p {
+                              opacity: 1;
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }
 
 @include Mobile {

@@ -11,11 +11,6 @@ const menu = new Swiper('.menu-description .mySwiper', {
    centeredSlides: true,
    spaceBetween: 30,
    rewind: true,
-   //  autoplay: true,
-   pagination: {
-      el: '.swiper-pagination',
-      type: 'progressbar',
-   },
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

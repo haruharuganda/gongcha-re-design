@@ -1,0 +1,84 @@
+@import 'mixin';
+@import 'common';
+
+.order {
+   background-color: #fefcf6;
+   height: 50rem;
+   display: flex;
+   .container {
+      height: 80%;
+      margin: auto;
+      .text {
+         text-align: center;
+         h1 {
+            margin-bottom: 1.5rem;
+         }
+         p {
+            line-height: 1.6;
+         }
+         &::after {
+            display: block;
+            content: '';
+            background-color: #000;
+            width: 100%;
+            height: 0.0625rem;
+            margin: 2rem 0;
+         }
+      }
+      .explan {
+         text-align: center;
+         height: 60%;
+         h1 {
+            margin-bottom: 2rem;
+         }
+         > div {
+            height: 100%;
+            ul {
+               display: flex;
+               justify-content: space-between;
+               height: 100%;
+               li {
+                  width: 15.625rem;
+                  display: flex;
+                  justify-content: center;
+                  background-color: #ffffff;
+                  border: 1px solid #000;
+                  border-radius: 1.875rem;
+                  .card {
+                     img {
+                        padding: 4.375rem 0 3rem 0;
+                        border-bottom: 0.0625rem solid #000;
+                        transition: 0.3s;
+                     }
+                     > div {
+                        margin-top: 1.75rem;
+                        text-align: left;
+                        span {
+                           margin-bottom: 0.5rem;
+                        }
+                        h4 {
+                           line-height: 1;
+                           margin-bottom: 0.5rem;
+                        }
+                        p {
+                           opacity: 0;
+                           transition: 0.3s;
+                        }
+                     }
+                  }
+                  &:hover {
+                     .card {
+                        img {
+                           padding: 1.75rem 0 2rem 0;
+                        }
+                        p {
+                           opacity: 1;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
