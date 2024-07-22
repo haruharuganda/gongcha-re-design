@@ -423,42 +423,80 @@ h5 {
 }
 .order .container .explan > div ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
   height: 100%;
 }
-.order .container .explan > div ul li {
+.order .container .explan > div ul li.scroll-spy {
   width: 15.625rem;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
   border: 1px solid #000;
   border-radius: 1.875rem;
+  position: relative;
+  transform: translateY(500px);
+  transition: 1s;
+  opacity: 0;
 }
-.order .container .explan > div ul li .card img {
+.order .container .explan > div ul li.scroll-spy.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+.order .container .explan > div ul li.scroll-spy.delay-0 {
+  transition-delay: 0;
+}
+.order .container .explan > div ul li.scroll-spy.delay-1 {
+  transition-delay: 0.3s;
+}
+.order .container .explan > div ul li.scroll-spy.delay-2 {
+  transition-delay: 0.6s;
+}
+.order .container .explan > div ul li.scroll-spy .card img {
   padding: 4.375rem 0 3rem 0;
   border-bottom: 0.0625rem solid #000;
   transition: 0.3s;
 }
-.order .container .explan > div ul li .card > div {
+.order .container .explan > div ul li.scroll-spy .card > div {
   margin-top: 1.75rem;
   text-align: left;
 }
-.order .container .explan > div ul li .card > div span {
+.order .container .explan > div ul li.scroll-spy .card > div span {
   margin-bottom: 0.5rem;
 }
-.order .container .explan > div ul li .card > div h4 {
+.order .container .explan > div ul li.scroll-spy .card > div h4 {
   line-height: 1;
   margin-bottom: 0.5rem;
 }
-.order .container .explan > div ul li .card > div p {
+.order .container .explan > div ul li.scroll-spy .card > div p {
   opacity: 0;
   transition: 0.3s;
 }
-.order .container .explan > div ul li:hover .card img {
+.order .container .explan > div ul li.scroll-spy:hover .card img {
   padding: 1.75rem 0 2rem 0;
 }
-.order .container .explan > div ul li:hover .card p {
+.order .container .explan > div ul li.scroll-spy:hover .card p {
   opacity: 1;
+}
+
+.store .container {
+  display: flex;
+}
+.store .container span {
+  display: inline-block;
+  margin-top: 3.5rem;
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+.store .container .store-search {
+  width: 45%;
+}
+.store .container .app-promotion {
+  width: 65%;
+  background-color: #68b299;
+}
+.store .container .app-promotion span {
+  color: #fff;
 }
 
 footer {
@@ -584,49 +622,13 @@ h5 {
   .gongCha-menu .container .menu-description .swiper .swiper-slide img {
     width: 12.5rem;
   }
-  .order .container .explan {
-    text-align: center;
+  .order {
+    justify-content: center;
+    align-items: center;
   }
-  .order .container .explan > div {
-    height: 100%;
-  }
-  .order .container .explan > div ul {
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 33.3333333333%;
-    gap: 32px;
-  }
-  .order .container .explan > div ul li {
-    width: 100%;
-    display: block;
-  }
-  .order .container .explan > div ul li .card {
-    padding: 0 20px;
-  }
-  .order .container .explan > div ul li .card img {
-    display: none;
-  }
-  .order .container .explan > div ul li .card > div {
-    margin-top: 2rem;
-    text-align: left;
-  }
-  .order .container .explan > div ul li .card > div span {
-    margin-bottom: 1rem;
-  }
-  .order .container .explan > div ul li .card > div h4 {
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-  .order .container .explan > div ul li .card > div p {
-    opacity: 0;
-    transition: 0.3s;
-  }
-  .order .container .explan > div ul li:hover .card img {
-    padding: 1.75rem 0 2rem 0;
-  }
-  .order .container .explan > div ul li:hover .card p {
-    opacity: 1;
+  .order .container {
+    margin: 0;
+    padding: 0;
   }
 }
 @media (max-width: 45rem) {
@@ -665,5 +667,65 @@ h5 {
   .gongCha-menu .container .menu-description .swiper .swiper-slide .description .rating ul li {
     width: 0.625rem;
     height: 0.625rem;
+  }
+  .order {
+    justify-content: center;
+    align-items: center;
+  }
+  .order .container {
+    margin: 0;
+    padding: 0;
+  }
+  .order .container .explan {
+    text-align: center;
+  }
+  .order .container .explan > div {
+    height: 100%;
+  }
+  .order .container .explan > div ul {
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 33.3333333333%;
+    gap: 32px;
+  }
+  .order .container .explan > div ul li.scroll-spy {
+    width: 100%;
+    display: block;
+  }
+  .order .container .explan > div ul li.scroll-spy .card {
+    padding: 0 20px;
+    height: 5rem;
+    position: relative;
+  }
+  .order .container .explan > div ul li.scroll-spy .card img {
+    display: none;
+  }
+  .order .container .explan > div ul li.scroll-spy .card > div {
+    margin-top: 0.75rem;
+    text-align: left;
+  }
+  .order .container .explan > div ul li.scroll-spy .card > div span {
+    display: inline-block;
+  }
+  .order .container .explan > div ul li.scroll-spy .card > div h4 {
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .order .container .explan > div ul li.scroll-spy .card > div p {
+    opacity: 0;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+  }
+  .order .container .explan > div ul li.scroll-spy:hover .card img {
+    padding: 1.75rem 0 2rem 0;
+  }
+  .order .container .explan > div ul li.scroll-spy:hover .card h4 {
+    opacity: 0;
+  }
+  .order .container .explan > div ul li.scroll-spy:hover .card p {
+    opacity: 1;
+    bottom: 1.25rem;
   }
 }
